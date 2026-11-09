@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">BroadcastDemo</string>
+    <string name="title_broadcast">广播机制案例</string>
+    <string name="broadcast_hint">1. 每隔一分钟，系统会发出 TIME_TICK 广播，本页动态注册的接收器会弹出 “time has changed”。\n2. 设备重启后，静态注册的 BootCompleteReceiver 会弹出 “boot completed!”。\n3. 点击“发送标准广播”：MyBroadcastReceiver 与 AnotherBroadcastReceiver 都会收到，Abort 在标准广播中无效。\n4. 点击“发送有序广播”：MyBroadcastReceiver（priority=20）先收到并截断广播，优先级较低的 AnotherBroadcastReceiver（priority=10）收不到。\n5. 点击“发送本地广播”：只有本应用内部的 LocalReceiver 能收到，其他应用无法接收。</string>
+    <string name="btn_send_standard">发送标准广播</string>
+    <string name="btn_send_ordered">发送有序广播</string>
+    <string name="btn_send_local">发送本地广播</string>
+    <string name="toast_time_changed">time has changed</string>
+    <string name="toast_received_my">received a broadcast!</string>
+    <string name="toast_abort">即将截断广播～</string>
+    <string name="toast_received_another">received in AnotherBroadcastReceiver!</string>
+    <string name="toast_received_local">received local broadcast!</string>
+    <string name="toast_boot_completed">boot completed!</string>
+</resources>
